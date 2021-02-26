@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <div class="post">
+    <h1 class="post-title">Tags</h1>
+    <div class="post-content">
+      <ul>
+        {{ $type := .Type }}
+        {{ $terms := cond .Site.Params.sortTaxonomiesByCount .Data.Terms.ByCount .Data.Terms.Alphabetical }}
+        {{ range $terms }}
+          {{ $name := .Name }}
+          {{ $count := .Count }}
+          <li>
+            {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+              <a href="{{.RelPermalink}}">{{ .Title | title }}</a> ({{ $count }})
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+{{ end }}

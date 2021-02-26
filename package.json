@@ -1,0 +1,22 @@
+{
+  "name": "hugo-modern-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nick Groenen",
+  "license": "MIT",
+  "scripts": {},
+  "browserslist": [
+    ">0.01%"
+  ],
+  "devDependencies": {
+    "browserslist": "^4.0.1",
+    "cssnano": "^4.1.8",
+    "postcss": "^7.0.0",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^8.0.0"
+  }
+}

@@ -1,0 +1,87 @@
+@media print {
+  body {
+    margin: 0 30px 30px 30px;
+    font-size: 12px;
+    max-width: 100%;
+    background: #ffffff;
+  }
+
+  div.container, div.content {
+    display: block;
+  }
+
+  div.content, div.post, div.pagination {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h1, .post-title {
+    font-size: 1.75rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+
+  a, a:visited, a code, a:visited code {
+    text-decoration: none;
+  }
+
+  a:after {
+    content: " [" attr(href) "]";
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+
+  nav, footer, h1, h2, h3, h4, h5, h6, .post-tags, .post-meta, .button, #content #sub-header, .footnote-ref {
+    a:after {
+      content: "";
+    }
+  }
+
+  footer {
+    .footer__inner {
+      border-top: 1px solid var(--light-color-secondary);
+      display: block;
+      text-align: left;
+
+      .logo {
+        display: none;
+      }
+
+      .copyright {
+        padding-top: 0.5rem;
+        display: block;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .footer {
+    padding: 10px 0 0 0;
+  }
+
+  .footnote-return {
+    display: none;
+  }
+
+  pre, pre code {
+    /* Can't overflow on printed pages, force word-wrapping instead */
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+
+  header, .header, a.read-more, .pagination {
+    display: none;
+  }
+
+  #resume a:after {
+    content: "";
+  }
+}
