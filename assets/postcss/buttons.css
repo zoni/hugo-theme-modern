@@ -1,3 +1,15 @@
+input[type=text] {
+  font-size: normal;
+  outline: none;
+  padding: 0.7rem;
+  background: rgb(236, 237, 238);
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
 .button-container {
   display: table;
   margin-left: auto;
