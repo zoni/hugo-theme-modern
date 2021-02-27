@@ -19,6 +19,7 @@ body {
   background-color: var(--light-background);
   color: var(--light-color);
   text-rendering: optimizeLegibility;
+  text-decoration-skip-ink: none;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "liga", "case", "calt", "ss01", "locl";
   -webkit-overflow-scrolling: touch;
@@ -45,42 +46,26 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.3;
+  line-height: 1.15;
   margin: 1.6rem 0 1.6rem 0;
 }
 
 h1 {
-  font-size: 2.625rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.625rem;
+  font-size: 1.6rem;
 }
 
 h3 {
-  font-size: 1.375rem;
+  font-size: 1.2rem;
 }
 
-h4 {
-  font-size: 1.125rem;
+h4, h5, h6 {
+  font-size: 1rem;
 }
 
-@media (--phone) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.15rem;
-  }
-
-  h4 {
-    font-size: 1.125rem;
-  }
 }
 
 a {

@@ -1,0 +1,9 @@
+{{- $fallback := "Untitled" -}}
+{{- with .File }}
+  {{- with .TranslationBaseName }}
+    {{- $fallback = replace . "-" " " | title }}
+  {{- end -}}
+{{- end -}}
+
+{{- .Title | default $fallback }}
+{{- /* whitespace stripped here to avoid trailing newline in rendered result caused by file EOL */ -}}

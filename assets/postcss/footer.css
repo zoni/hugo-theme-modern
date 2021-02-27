@@ -20,6 +20,10 @@
     color: inherit;
   }
 
+  .logo {
+    font-weight: 500;
+  }
+
   .copyright {
     display: flex;
     flex-direction: row;
