@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <div class="post">
+    {{ if $.Param "automaticHeadings" | default true }}
+    <h1>{{ if .Params.heading }}{{ .Params.heading | markdownify }}{{ else }}{{ .Title | markdownify }}{{ end }}</h1>
+    {{ end }}
+
+    {{ if .Params.Cover }}
+      {{ if .Params.UseRelativeCover }}
+        <img src="{{ (printf "%s%s" .Permalink .Params.Cover ) }}" class="post-cover" />
+      {{ else }}
+        <img src="{{ .Params.Cover | absURL }}" class="post-cover" />
+      {{ end }}
+    {{ end }}
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "comments.html" . }}
+    </div>
+{{ end }}
+
