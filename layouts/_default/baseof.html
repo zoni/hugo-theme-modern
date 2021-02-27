@@ -6,7 +6,7 @@
     {{ end }}
     {{ partial "head.html" . }}
   </head>
-  <body {{ if .Params.id }} id="{{ .Params.id }}"{{ end }} class="{{ .Params.class | default "" }}{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
+  <body {{ if .Params.id }} id="{{ .Params.id }}"{{ end }} class="{{ .Params.class | default "" }}{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}{{ if $.Param "printExpandURLs" | default true }} print-expand-urls{{ end }}{{ if $.Param "outlineNestedLists" | default false }} outline-nested-lists{{ end }}">
     <div class="container">
       {{ partial "header.html" . }}
 
