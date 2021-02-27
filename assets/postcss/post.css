@@ -5,6 +5,10 @@
   padding: 20px;
   margin: 20px auto;
 
+  @media (--phone) {
+    margin-top: 0;
+  }
+
   @media (--tablet) {
     max-width: 660px;
   }
