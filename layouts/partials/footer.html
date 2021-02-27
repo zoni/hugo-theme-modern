@@ -1,7 +1,11 @@
-{{ if $.Params.showfooter | default true }}
+{{ if $.Param "showfooter" | default true }}
 <footer class="footer">
   <div class="footer__inner">
+      {{ if $.Param "logoInFooter" | default true }}
       {{ partial "logo.html" . }}
+      {{ else }}
+      <span></span>
+      {{ end }}
       <div class="copyright">
         <span>© {{ now.Year }} {{ $.Site.Params.Copyright | markdownify }}</span>
       </div>
