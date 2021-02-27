@@ -1,0 +1,6 @@
+{{ $searchjs := resources.Get "js/search.js" | minify | fingerprint "sha256" }}
+<script type="text/javascript" src="{{ $searchjs.Permalink }}" integrity="{{ $searchjs.Data.Integrity }}"></script>
+
+{{ $lunrjs := resources.Get "js/lunr.js" | minify | fingerprint "sha256" }}
+<script type="text/javascript" src="{{ $lunrjs.Permalink }}" integrity="{{ $lunrjs.Data.Integrity }}"></script>
+

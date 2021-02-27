@@ -26,5 +26,11 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
 
+{{ if .File -}}
+{{ if eq .File.Path "search.md" -}}
+{{ partial "search" . }}
+{{ end -}}
+{{ end -}}
+
 <!-- head custom -->
 {{- partial "extended_head.html" . }}

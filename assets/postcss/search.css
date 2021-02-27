@@ -1,0 +1,24 @@
+#search-container {
+  max-width: 100%;
+
+  input[type=text] {
+    width: 100%;
+  }
+}
+
+#search-results-container {
+  article {
+    /*margin-left: 0;*/
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  h2 {
+    margin: 1.5rem 0 0.5rem 0;
+  }
+
+  h3 {
+    width: 100%;
+  }
+}

@@ -12,4 +12,5 @@
 
 @import 'archive';
 @import 'syntaxhighlighting';
+@import 'search';
 @import 'print';
