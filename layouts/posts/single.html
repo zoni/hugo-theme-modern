@@ -29,7 +29,13 @@
     {{ end }}
 
     <div class="post-content">
-      {{ .Content }}
+      {{ with .Content }}
+        {{ if $.Param "stripHighlights" | default false }}
+          {{ partial "strip-highlights" . }}
+        {{ else }}
+          {{ partial "mark-highlights" . }}
+        {{ end }}
+      {{ end }}
     </div>
     {{ if or .NextInSection .PrevInSection }}
       <div class="pagination">

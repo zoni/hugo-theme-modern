@@ -66,10 +66,15 @@ h4, h5, h6 {
   font-size: 1rem;
 }
 
-}
-
 a {
   color: inherit;
+}
+
+mark {
+  color: inherit;
+  word-break: break-word;
+  background-color: hsla(60, 100%, 50%, 0.5);
+  box-decoration-break: clone;
 }
 
 img {

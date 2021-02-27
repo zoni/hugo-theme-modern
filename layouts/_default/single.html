@@ -13,7 +13,13 @@
     {{ end }}
 
     <div class="post-content">
-      {{ .Content }}
+      {{ with .Content }}
+        {{ if $.Param "stripHighlights" | default false }}
+          {{ partial "strip-highlights" . }}
+        {{ else }}
+          {{ partial "mark-highlights" . }}
+        {{ end }}
+      {{ end }}
     </div>
 
     {{ partial "comments.html" . }}
