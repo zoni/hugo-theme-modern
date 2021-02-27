@@ -26,17 +26,13 @@
     break-after: avoid-page;
   }
 
-  a, a:visited, a code, a:visited code {
-    text-decoration: none;
+  .print-expand-urls a:after {
+      content: " [" attr(href) "]";
+      text-decoration: none;
+      font-size: 0.8em;
   }
 
-  a:after {
-    content: " [" attr(href) "]";
-    text-decoration: none;
-    font-size: 0.8em;
-  }
-
-  nav, footer, h1, h2, h3, h4, h5, h6, .post-tags, .post-meta, .button, #content #sub-header, .footnote-ref {
+  nav, footer, h1, h2, h3, h4, h5, h6, .post-tags, .post-meta, .button, #content #sub-header, .footnote-ref, .footer {
     a:after {
       content: "";
     }
@@ -46,16 +42,12 @@
     .footer__inner {
       border-top: 1px solid var(--light-color-secondary);
       display: block;
-      text-align: left;
+      padding-top: 0.5rem;
 
-      .logo {
-        display: none;
-      }
-
-      .copyright {
-        padding-top: 0.5rem;
+      .logo, .logo__text, .copyright {
         display: block;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
+        text-align: center;
       }
     }
   }
