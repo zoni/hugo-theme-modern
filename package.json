@@ -17,6 +17,6 @@
     "postcss-mixins": "^7.0.3",
     "postcss-nested": "^5.0.4",
     "postcss-preset-env": "^6.7.0",
-    "postcss-url": "^10.1.1"
+    "postcss-url": "^10.1.3"
   }
 }
