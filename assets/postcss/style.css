@@ -8,6 +8,7 @@
 @import 'main';
 @import 'post';
 @import 'pagination';
+@import 'page_info';
 @import 'footer';
 
 @import 'archive';
