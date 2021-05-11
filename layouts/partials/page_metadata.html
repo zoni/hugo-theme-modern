@@ -1,0 +1,29 @@
+{{ if .Param "display_metadata" }}
+<aside>
+  <div class="pageinfo">
+    {{ if .Param "backlinks" }}
+    <div class="backlinks">
+      <h2><span class="icon" aria-hidden="true">🔗</span>Links to this page</h2>
+      {{ range .Param "backlinks" }}
+        {{ $p := site.GetPage . }}
+        <h3><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></h3>
+        <p><a href="{{ $p.Permalink }}">{{ $p.Description }}</a></p>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="metadata">
+      <h2><span class="icon" aria-hidden="true">📂</span>Metadata</h2>
+      <ul>
+        <li><strong>Last changed:</strong> {{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</li>
+        {{ if .GitInfo }}
+        <li><strong>Change ID:</strong> {{ .GitInfo.Hash }}</li>
+        {{ end }}
+      </ul>
+    </div>
+
+    {{ partial "comments.html" . }}
+  </div>
+
+</aside>
+{{ end }}

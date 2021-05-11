@@ -69,7 +69,7 @@
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
   }
 
-  header, .header, a.read-more, .pagination {
+  header, .header, a.read-more, .pagination, .pageinfo {
     display: none;
   }
 
