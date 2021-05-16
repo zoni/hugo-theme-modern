@@ -11,7 +11,10 @@ Changes to CSS should be done in `assets/postcss/*`.
 While making changes, you'll want to have postcss running:
 
 ```
-node_modules/.bin/postcss --watch --poll --no-map assets/postcss/style.css --output assets/css/style.css
+yarn run postcss
+
+# Or with npm:
+npm run postcss
 ```
 
 ## Licence
