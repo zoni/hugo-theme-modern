@@ -10,7 +10,7 @@
   ],
   "devDependencies": {
     "browserslist": "^4.0.1",
-    "cssnano": "^5.0.2",
+    "cssnano": "^5.0.5",
     "postcss": "^8.2.9",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.1",
