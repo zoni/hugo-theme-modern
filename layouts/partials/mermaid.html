@@ -1,0 +1,9 @@
+{{ if $.Param "mermaid" | default false }}
+<script src="{{ $.Site.BaseURL }}/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({startOnLoad: true, theme: "dark"});
+  window.onload = function() {
+    mermaid.init(undefined, ".language-mermaid");
+  };
+</script>
+{{ end }}

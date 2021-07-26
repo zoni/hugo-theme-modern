@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "mathjax": "rsync --archive --delete node_modules/mathjax/es5/ static/mathjax",
+    "mermaid": "cp node_modules/mermaid/dist/mermaid.min.js static",
     "postcss": "postcss --watch --poll --no-map assets/postcss/style.css --output assets/css/style.css"
   },
   "browserslist": [
@@ -24,6 +25,7 @@
     "postcss-url": "^10.1.3"
   },
   "dependencies": {
-    "mathjax": "^3.2.0"
+    "mathjax": "^3.2.0",
+    "mermaid": "^8.11.0"
   }
 }
