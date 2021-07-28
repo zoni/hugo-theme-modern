@@ -71,10 +71,17 @@ a {
 }
 
 mark {
-  color: inherit;
   word-break: break-word;
-  background-color: hsla(60, 100%, 50%, 0.5);
   box-decoration-break: clone;
+}
+
+mark, :target {
+  color: inherit;
+  background-color: hsla(60, 100%, 50%, 0.3);
+
+  .dark-theme & {
+    background-color: hsla(50, 70%, 60%, 0.2);
+  }
 }
 
 img {
