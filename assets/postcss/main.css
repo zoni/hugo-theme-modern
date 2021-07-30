@@ -51,6 +51,29 @@ h1, h2, h3, h4, h5, h6 {
 
   .header-link {
     display: none;
+    margin-left: 0.5rem;
+  }
+}
+
+h1, h2 {
+  /* Unfortunately, it's not possible to references variables in the url() statements below */
+  .header-link:after {
+    content: url("link.svg" param(--color #000));
+
+    .dark-theme & {
+      content: url("link-small.svg" param(--color #a9a9b3));
+    }
+  }
+}
+
+h3, h4, h5, h6 {
+  /* Unfortunately, it's not possible to references variables in the url() statements below */
+  .header-link:after {
+    content: url("link-small.svg" param(--color #000));
+
+    .dark-theme & {
+      content: url("link-small.svg" param(--color #a9a9b3));
+    }
   }
 }
 

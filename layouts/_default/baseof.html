@@ -22,7 +22,8 @@
 
     {{ $menujs := resources.Get "js/menu.js" }}
     {{ $themejs := resources.Get "js/theme.js" }}
-    {{ $js := slice $menujs $themejs | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+    {{ $heading_anchors_on_hover_js := resources.Get "js/heading-anchors-on-hover.js" }}
+    {{ $js := slice $menujs $themejs $heading_anchors_on_hover_js | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $js.Permalink }}"></script>
 
     {{ partial "analytics.html" . }}
