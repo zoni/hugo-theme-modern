@@ -20,10 +20,7 @@
       {{ end }}
     </div>
 
-    {{ $menujs := resources.Get "js/menu.js" }}
-    {{ $themejs := resources.Get "js/theme.js" }}
-    {{ $heading_anchors_on_hover_js := resources.Get "js/heading-anchors-on-hover.js" }}
-    {{ $js := slice $menujs $themejs $heading_anchors_on_hover_js | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+    {{ $js := slice (resources.Get "js/menu.js") (resources.Get "js/theme.js") (resources.Get "js/heading-anchors-on-hover.js") (resources.Get "js/link-classification.js") | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $js.Permalink }}"></script>
 
     {{ partial "analytics.html" . }}

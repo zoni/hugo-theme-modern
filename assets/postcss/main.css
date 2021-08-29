@@ -101,6 +101,11 @@ h4, h5, h6 {
 
 a {
   color: inherit;
+
+  &.external:after {
+    content: url("external-link.svg" param(--color #6f6f79));
+    margin-left: 0.25rem;
+  }
 }
 
 mark {

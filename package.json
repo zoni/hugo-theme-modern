@@ -13,13 +13,13 @@
     ">0.01%"
   ],
   "devDependencies": {
-    "browserslist": "^4.16.6",
-    "cssnano": "^5.0.6",
-    "postcss": "^8.3.5",
+    "browserslist": "^4.16.8",
+    "cssnano": "^5.0.8",
+    "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.1.0",
-    "postcss-nested": "^5.0.5",
+    "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^6.7.0",
     "postcss-svg": "^3.0.0",
     "postcss-url": "^10.1.3"
