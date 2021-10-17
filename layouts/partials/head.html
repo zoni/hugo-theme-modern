@@ -12,6 +12,9 @@
 {{ $css := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
 <link href="{{ $css.Permalink }}" rel="stylesheet" type="text/css" />
 
+{{ $css := slice (resources.Get "css/littlefoot.dist.css") (resources.Get "css/littlefoot.css") | resources.Concat "css/littlefoot.css" | resources.Minify | resources.Fingerprint }}
+<link href="{{ $css.Permalink }}" rel="stylesheet" type="text/css" />
+
 <!-- Icons -->
 <link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}">
 

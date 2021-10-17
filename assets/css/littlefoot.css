@@ -1,0 +1,22 @@
+.littlefoot__button, .dark-theme .littlefoot__button {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.littlefoot__button {
+  color: #666;
+}
+
+.littlefoot-footnote__content {
+}
+
+.dark-theme .littlefoot-footnote__content {
+  color: #222;
+}
+
+@media print {
+  .littlefoot__button, .dark-theme .littlefoot__button {
+    display: none;
+  }
+}
