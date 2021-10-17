@@ -5,6 +5,7 @@
   "author": "Nick Groenen",
   "license": "MIT",
   "scripts": {
+    "littlefoot": "cp node_modules/littlefoot/dist/littlefoot.css assets/css/littlefoot.dist.css && cp node_modules/littlefoot/dist/littlefoot.js static",
     "mathjax": "rsync --archive --delete node_modules/mathjax/es5/ static/mathjax",
     "mermaid": "cp node_modules/mermaid/dist/mermaid.min.js static",
     "postcss": "postcss --watch --poll --no-map assets/postcss/style.css --output assets/css/style.css"
@@ -25,6 +26,7 @@
     "postcss-url": "^10.1.3"
   },
   "dependencies": {
+    "littlefoot": "^3.4.1",
     "mathjax": "^3.2.0",
     "mermaid": "^8.12.0"
   }
