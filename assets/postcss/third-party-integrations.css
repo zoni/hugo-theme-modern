@@ -1,0 +1,11 @@
+/* ConvertKit forms have a smaller max-width than the page width of this theme.
+ * Overwriting this ensures these forms span the full page with correctly. */
+.formkit-form {
+  max-width: 100% !important;
+}
+
+@media print {
+  .formkit-form {
+    display: none;
+  }
+}
