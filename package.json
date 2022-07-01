@@ -14,7 +14,7 @@
     ">0.01%"
   ],
   "devDependencies": {
-    "browserslist": "^4.16.8",
+    "browserslist": "^4.21.1",
     "cssnano": "^5.0.8",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
