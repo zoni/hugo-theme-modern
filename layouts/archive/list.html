@@ -1,8 +1,5 @@
 {{ define "main" }}
 
-{{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
-{{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
-
 <div class="archive">
   <h1>{{ .Title }}</h1>
   {{ range .Site.RegularPages.GroupByPublishDate "2006" }}
@@ -13,8 +10,7 @@
     <div class="archive__group-month">
       <h3 class="archive__group-month-header">{{ .Key }}</h3>
       <div class="archive__group-posts">
-        {{ range where .Pages "Type" $contentTypeName }}
-        {{ if eq .Kind "page" }}
+        {{ range .Pages }}
         <div class="archive__post">
           <h3 class="archive__post-title"><a
               href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
@@ -35,7 +31,6 @@
             {{ end }}
           </div>
         </div>
-        {{ end }}
         {{ end }}
       </div>
     </div>
