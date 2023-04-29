@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "littlefoot": "^3.4.1",
-    "mathjax": "^3.2.0",
+    "mathjax": "^3.2.2",
     "mermaid": "^8.12.0"
   }
 }
